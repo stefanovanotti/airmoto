@@ -1,0 +1,59 @@
+* {
+  font-family: "Source Sans Pro", sans-serif;
+}
+.nav {
+  background-color: #73a4ac;
+}
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+h2,
+h3,
+h4 {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+}
+
+.big-container {
+  display: flex;
+  width: 100%;
+}
+
+.container {
+  width: 90%;
+}
+
+.flexed-item {
+  display: flex;
+}
+
+.home-container {
+  height: calc(100vh - (40px));
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  background: black;
+  width: 100%;
+  background-image: url("../images/bike.jpg");
+  image-rendering: auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#intro {
+  color: tomato;
+  font-size: 50px;
+  margin-top: 50px;
+}
+
+#map {
+  height: 400px;
+  width: 800px;
+}

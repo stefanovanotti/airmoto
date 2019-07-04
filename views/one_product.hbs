@@ -1,0 +1,24 @@
+<div class="one-product-container">
+  <div class="sneak-info">
+    <div class="sneak-info-header">
+      <h1 class="sneak-name">{{product.make}}</h1>
+      <h2>{{product.model}}</h2>
+      <h2>{{product.horsepower}}</h2>
+      <h2>{{product.displacement}}</h2>
+      <h2>{{product.dailyprice}}</h2>
+      <h2>{{product.location}}</h2>
+      <p class="sneak-description">{{product.description}}</p>
+      <p class="sneak-ref">{{product.bodytype}}</p>
+      {{!-- <p class="sneak-description">A super Sneaker that make your run faster, win time and money</p> --}}
+    </div>
+  </div>
+  <div class="flexed-item">
+    <a href="/rent/{{product._id}}" class="button-primary a-link">Rent this Bike</a>
+  </div>
+
+  <div class="sneak-img-container">
+    <img src={{product.image}} alt="img-product" class="sneak-img">
+  </div>
+
+
+</div>

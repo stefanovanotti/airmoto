@@ -1,0 +1,23 @@
+<div class="main-content-products flexed-item big-container">
+
+  {{!-- PRODUCTS--}}
+  <section class="products-wrapper">
+    <div class="products-grid flexed-item">
+      {{#each request}}
+      {{!-- <a href="/rentbike/{{this._id}}" class="product-item-wrapper"> --}}
+      <h1 class="product-name">{{this.firstname}}</h1>
+      <h1 class="product-name">{{this.lastname}}</h1>
+      <h2 class="product-cat">Requested Date: {{this.date}}</h2>
+      <h2 class="product-price">Phone Number{{this.phonenumber}}</h2>
+      <h2>Message by the requester {{this.message}}</h2>
+      {{!-- </a> --}}
+      {{!-- <div class="flexed-item">
+        <a href="/edit/{{this._id}}" class="button-primary a-link">Update Item</a>
+      </div>
+      <div class="flexed-item">
+        <a href="/delete/{{this._id}}" class="button-primary a-link">Delete Item</a>
+      </div> --}}
+      {{/each}}
+    </div>
+  </section>
+</div>

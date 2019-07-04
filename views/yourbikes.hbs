@@ -1,0 +1,24 @@
+<div class="main-content-products flexed-item big-container">
+
+  {{!-- PRODUCTS--}}
+  <section class="products-wrapper">
+    <div class="products-grid flexed-item">
+      {{#each product}}
+      {{!-- <a href="/rentbike/{{this._id}}" class="product-item-wrapper"> --}}
+      <div class="product-img"><img src={{this.image}} alt="bikes"></div>
+      <h1 class="product-name">{{this.make}}</h1>
+      <h1 class="product-name">{{this.model}}</h1>
+      <h2 class="product-cat">Body Type: {{this.bodytype}}</h2>
+      <h2 class="product-price">Price per day: ${{this.dailyprice}}</h2>
+      <h2>Location of the Bike {{this.location}}</h2>
+      {{!-- </a> --}}
+      <div class="flexed-item">
+        <a href="/edit/{{this._id}}" class="button-primary a-link">Update Item</a>
+      </div>
+      <div class="flexed-item">
+        <a href="/delete/{{this._id}}" class="button-primary a-link">Delete Item</a>
+      </div>
+      {{/each}}
+    </div>
+  </section>
+</div>
