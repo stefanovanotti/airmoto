@@ -24,6 +24,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(logger("dev"));
 
+app.locals.google_key = process.env.GOOGLE_KEY;
+app.locals.site_url = process.env.SITE_URL;
+
 app.use(cookieParser());
 
 // Express View engine setup

@@ -8,10 +8,14 @@
 
 var geocoder;
 var map;
+var site = document.getElementById("siteurl");
+//console.log(site);
+const url = site.getAttribute("data-url");
+console.log(url);
 
 function getBikesCites() {
   axios
-    .get("http://localhost:3000/allBikes/api")
+    .get(url + "/allBikes/api")
     .then(dbRes => {
       const citiesArray = [];
       const coordinates = [];
