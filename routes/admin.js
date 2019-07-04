@@ -1,6 +1,5 @@
 const express = require("express");
 const router = new express.Router();
-const motoModel = require("./../models/Product");
 const Product = require("./../models/Product");
 const Booking = require("./../models/Booking");
 const uploaderMiddleware = require("./../config/cloudinary");
@@ -9,68 +8,50 @@ router.get("/addbike", (req, res) => {
   if (!req.session.currentUser) return res.redirect("/login");
   res.render("add-bike", { scripts: ["addbike.js"] });
 });
+// {
+//   scripts: ["addbike.js"];
+// }
+router.post("/addbike", uploaderMiddleware.single("image"), (req, res) => {
+  // return console.log(req.body);
+  console.log("YYOYOYOY", req.body);
+  const {
+    make,
+    model,
+    owner_id,
+    horsepower,
+    displacement,
+    dailyprice,
+    description,
+    location,
+    email,
+    bodytype
+  } = req.body;
 
-router.post(
-  "/addbike",
-  uploaderMiddleware.single("image_product"),
-  (req, res) => {
-    // return console.log(req.body);
-    console.log(req.body);
-    const {
-      make,
-      model,
-      owner_id,
-      horsepower,
-      displacement,
-      dailyprice,
-      description,
-      location,
-      email,
-      image,
-      bodytype
-    } = req.body;
+  if (req.file) var image = req.file.secure_url;
+  const newProduct = new Product({
+    make,
+    model,
+    horsepower,
+    displacement,
+    bodytype,
+    dailyprice,
+    description,
+    location,
+    owner: owner_id,
+    email,
+    image
+  });
 
-    const newProduct = {
-      make,
-      model,
-      horsepower,
-      displacement,
-      bodytype,
-      dailyprice,
-      description,
-      location,
-      owner: owner_id,
-      email,
-      image
-    };
-
-    if (req.file) newProduct.image = req.file.secure_url;
-
-    motoModel
-      .create(newProduct)
-      .then(dbRes => {
-        res.redirect("/rentbike");
-      })
-      .catch(error => {
-        console.log("db problem !!!");
-        console.log(error);
-      });
-  }
-);
-
-// router.get("/prod-manage", (req, res) => {
-//   console.log("ready to manage");
-//   if (!req.session.currentUser) return res.redirect("/login");
-//   Product.find({})
-//     .then(product => {
-//       res.render("products_manage", { product });
-//       //console.log(product);
-//     })
-//     .catch(err => {
-//       res.render("products_manage");
-//       console.log(err);
-//     });
-// });
+  Product.create(newProduct)
+    .then(dbRes => {
+      console.log("TEST", dbRes);
+      res.redirect("/rentbike");
+    })
+    .catch(error => {
+      console.log("db problem !!!");
+      console.log(error);
+    });
+});
 
 router.get("/yourbikes", (req, res) => {
   console.log(req.session.currentUser._id);

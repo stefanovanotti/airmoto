@@ -1,8 +1,8 @@
-<div class="main-content-products flexed-item big-container">
+<div class="main-content-products big-container center textcenter">
 
   {{!-- PRODUCTS--}}
   <section class="products-wrapper">
-    <div class="products-grid flexed-item">
+    <div class="products-grid flexed-item flexcolumn">
       {{#each product}}
       {{!-- <a href="/rentbike/{{this._id}}" class="product-item-wrapper"> --}}
       <div class="product-img"><img src={{this.image}} alt="bikes"></div>
@@ -13,10 +13,10 @@
       <h2>Location of the Bike {{this.location}}</h2>
       {{!-- </a> --}}
       <div class="flexed-item">
-        <a href="/edit/{{this._id}}" class="button-primary a-link">Update Item</a>
+        <a href="/edit/{{this._id}}" class=" btn btn-primary button-primary a-link">Update Item</a>
       </div>
       <div class="flexed-item">
-        <a href="/delete/{{this._id}}" class="button-primary a-link">Delete Item</a>
+        <a href="/delete/{{this._id}}" class="button-primary a-link btn btn-danger">Delete Item</a>
       </div>
       {{/each}}
     </div>

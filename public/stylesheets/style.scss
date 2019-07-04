@@ -1,8 +1,9 @@
 * {
   font-family: "Source Sans Pro", sans-serif;
+  text-align: center;
 }
 .nav {
-  background-color: #73a4ac;
+  background-color: #b2bbbd;
 }
 body {
   font-family: "Source Sans Pro", sans-serif;
@@ -32,6 +33,7 @@ h4 {
 
 .flexed-item {
   display: flex;
+  justify-content: center;
 }
 
 .home-container {
@@ -56,4 +58,27 @@ h4 {
 #map {
   height: 400px;
   width: 800px;
+}
+
+.spacetop {
+  margin-top: 100px;
+}
+
+.addbike {
+  background-image: url("../images/adventure.jpg");
+  image-rendering: auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.flexcolumn {
+  flex-direction: column;
+  display: flex;
+}
+
+.center {
+  justify-content: center;
+}
+.textcenter {
+  text-align: center;
 }
