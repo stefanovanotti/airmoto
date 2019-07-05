@@ -2,10 +2,35 @@
 
   {{!-- PRODUCTS--}}
   <section class="products-wrapper rent-container flexed-item">
+
     <div class="motos-container products-grid flexed-item">
+      <div class="filter">
+        <form action="/rentbike" method="post">
+          <select class="browser-default custom-select" searchable="Search here.." name="bodytype">
+            {{!-- <select  id="main_category" class="select"> --}}
+            <option value="">Choose main Category...</option>
+            <option value="Scooter">Scooter</option>
+            <option value="Naked Bike">Naked Bike</option>
+            <option value="Supersport">Supersport</option>
+            <option value="Chopper">Chopper</option>
+            <option value="Sport Touring">Sport Touring</option>
+            <option value="Quad">Quad</option>
+            <option value="Tourer">Tourer</option>
+            <option value="Touring Enduro">Touring Enduro</option>
+            <option value="Enduro">Enduro</option>
+            <option value="Motocross">Motocross</option>
+            <option value="Streetfighter">Streetfighter</option>
+            <option value="Classic">Classic</option>
+            <option value="Coffee Racer">Coffee Racer</option>
+            <option value="Supermoto">Supermoto</option>
+            {{!-- </select> --}}
+          </select>
+          <button class="btn-primary btn add-moto-btn">Filter By Bodytype</button>
+        </form>
+      </div>
       {{#each product}}
       <a href="/rentbike/{{this._id}}" class="moto">
-        <div class="product-img"><img src={{this.image}} alt="bikes"></div>
+        <div class="product-img"><img class="img" src={{this.image}} alt="bikes"></div>
         <h1 class="product-name">{{this.make}}</h1>
         <h1 class="product-name">{{this.model}}</h1>
         <h2 class="product-cat">Body Type: {{this.bodytype}}</h2>

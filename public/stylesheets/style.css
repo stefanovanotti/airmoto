@@ -130,6 +130,13 @@ h4 {
   font-weight: bold;
   padding-top: 50px; }
 
+.product-img {
+  width: 90%;
+  margin: auto; }
+
+.img {
+  width: 100%; }
+
 .bg {
   background-image: url("../images/asphalt.jpg");
   background-size: cover;
