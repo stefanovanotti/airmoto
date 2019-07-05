@@ -93,11 +93,10 @@ router.post(
       dailyprice,
       description,
       location,
-      image,
       bodytype
     } = req.body;
 
-    if (req.file) newProduct.image = req.file.secure_url;
+    if (req.file) var image = req.file.secure_url;
 
     Product.findByIdAndUpdate(
       { _id: req.params.id },
