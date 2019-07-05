@@ -13,7 +13,7 @@ router.get("/rentbike", (req, res) => {
   Product.find({})
     .then(product => {
       product.forEach(element => {});
-      console.log(product);
+      //console.log(product);
       res.render("products", { product, scripts: ["rentbikes.js"] });
     })
     .catch(err => {
@@ -23,7 +23,7 @@ router.get("/rentbike", (req, res) => {
 
 router.post("/rentbike", (req, res) => {
   if (req.body.bodytype != "") {
-    console.log(req.body.bodytype);
+    //console.log(req.body.bodytype);
     Product.find({ bodytype: req.body.bodytype })
       .then(product => {
         // product.forEach(element => {});
@@ -59,6 +59,11 @@ router.get("/rentbike/:id", (req, res) => {
 
 router.get("/allBikes/api", (req, res) => {
   Product.find()
+    .then(dbRes => res.send(dbRes))
+    .catch(dbErr => console.log(dbErr));
+});
+router.post("/allBikes/api", (req, res) => {
+  Product.find({ _id: { $in: req.body.bikes } })
     .then(dbRes => res.send(dbRes))
     .catch(dbErr => console.log(dbErr));
 });

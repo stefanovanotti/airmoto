@@ -14,8 +14,11 @@ const url = site.getAttribute("data-url");
 console.log(url);
 
 function getBikesCites() {
+  const motos = document.querySelectorAll(".moto");
+  const bikesId = [];
+  motos.forEach(m => bikesId.push(m.href.split("/")[4]));
   axios
-    .get(url + "/allBikes/api")
+    .post(url + "/allBikes/api", { bikes: bikesId })
     .then(dbRes => {
       const citiesArray = [];
       const coordinates = [];
@@ -25,7 +28,7 @@ function getBikesCites() {
       console.log(citiesArray);
 
       dbRes.data.forEach(element => {
-        console.log(element);
+        // console.log(element);
         geocoder.geocode({ address: element.location }, function(
           results,
           status

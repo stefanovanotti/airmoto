@@ -2,11 +2,15 @@
   font-family: "Source Sans Pro", sans-serif;
   text-align: center;
 }
+a {
+  color: inherit !important;
+}
 .nav {
-  background-color: #b2bbbd;
+  background-color: black;
   position: fixed;
   z-index: 1;
   width: 100%;
+  color: white;
 }
 body {
   font-family: "Source Sans Pro", sans-serif;
