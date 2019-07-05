@@ -11,13 +11,12 @@
     <div class="bg"></div>
     <div class="products-grid flexed-item flexcolumn">
       {{#each request}}
-      <div class="moto2 singlereq">
+      <div class="moto2 singlereq black">
         {{!-- <a href="/rentbike/{{this._id}}" class="product-item-wrapper"> --}}
-        <p class="product-name">{{this.firstname}}</p>
-
-        <p class="product-name">{{this.lastname}}</p>
+        <p class="product-name">Name: {{this.firstname}}</p>
+        <p class="product-name">Lastname: {{this.lastname}}</p>
         <p class="product-cat">Requested Date: {{this.date}}</p>
-        <p class="product-price">Phone Number{{this.phonenumber}}</p>
+        <p class="product-price">Phone Number: {{this.phonenumber}}</p>
         <p>{{this.message}}</p>
         {{!-- </a> --}}
         {{!-- <div class="flexed-item">

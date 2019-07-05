@@ -18,7 +18,7 @@ body {
   flex-direction: column;
 }
 .background-blue {
-  background: blue;
+  background: black;
   height: 100%;
 }
 .maxheigth {
@@ -102,7 +102,7 @@ h4 {
   align-items: center;
   // margin-left: auto;
   padding-top: 70px;
-  background: salmon;
+  background: black;
 }
 .margin {
   margin: 0 auto;
@@ -189,8 +189,16 @@ h4 {
   z-index: -3;
 }
 .singlereq {
-  color: black;
-  background: gray;
+  background: black;
+  color: white;
+}
+.black {
+  background: black;
+}
+
+.oranges {
+  color: rgba(238, 107, 20, 0.877);
+  font-weight: bold;
 }
 .bookingdone {
   background-image: url("../images/adult.jpg");

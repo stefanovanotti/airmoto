@@ -2,7 +2,7 @@
   <form method="POST" class="add-product-form spacetop" action="/addbike" enctype="multipart/form-data"
     class="text-center border border-light p-5">
     <input type="hidden" name="owner_id" value={{currentUser._id}}>
-    <h3 class="form-title">Add Your Bike to the offers</h3>
+    <h3 class="form-title oranges">Add Your Bike to the offers</h3>
     <div class="form-item-wrapper flexed-item">
       {{!-- <label for="bike" class="label-name label">Make</label> --}}
       <input name="make" type="text" class="input-text input form-control mb-4" placeholder="Make">
@@ -32,11 +32,11 @@
       <input name="location" type="text" class="input-text input form-control mb-4" placeholder="Location" id="address">
     </div>
     <div class="form-item-wrapper flexed-item">
-      <label for="image_product">Choose Image</label>
+      <label for="image_product" class="oranges">Choose Image: </label>
       <input id="image_product" type="file" name="image">
     </div>
     <div class="form-item-wrapper flexed-item">
-      <label for="moto-main-cat" class="label-main-cat label">Bobytype</label>
+      <label for="moto-main-cat" class="label-main-cat oranges label">Bobytype: </label>
       <select class="browser-default custom-select" searchable="Search here.." name="bodytype">
         {{!-- <select  id="main_category" class="select"> --}}
         <option value="">Choose main Category...</option>
@@ -62,6 +62,6 @@
       
     </body> --}}
 
-    <button class="button-primary add-moto-btn" id="clickman">Add to collection</button>
+    <button class="button-primary btn btn-primary add-moto-btn" id="clickman">Add to collection</button>
   </form>
 </div>
