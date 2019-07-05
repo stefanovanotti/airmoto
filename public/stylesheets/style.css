@@ -18,7 +18,11 @@ body {
   flex-direction: column; }
 
 .background-blue {
-  background: blue; }
+  background: blue;
+  height: 100%; }
+
+.maxheigth {
+  height: 100%; }
 
 .height {
   height: 100vh; }
