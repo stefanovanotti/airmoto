@@ -1,25 +1,27 @@
-<div class="main-content-products flexed-item big-container">
+<div class="main-content-products flexed-item big-container spacetop yourrequest">
 
   {{!-- PRODUCTS--}}
   <section class="products-wrapper">
+    <div class="bg"></div>
     <div class="products-grid flexed-item flexcolumn">
       {{#each request}}
-      {{!-- <a href="/rentbike/{{this._id}}" class="product-item-wrapper"> --}}
-      <p class="product-name">{{this.firstname}}</p>
-      <br>
-      <p class="product-name">{{this.lastname}}</p><br>
-      <p class="product-cat">Requested Date: {{this.date}}</p><br>
-      <p class="product-price">Phone Number{{this.phonenumber}}</p><br>
-      <p>Message by the requester {{this.message}}</p>
-      {{!-- </a> --}}
-      {{!-- <div class="flexed-item">
+      <div class="moto2 singlereq">
+        {{!-- <a href="/rentbike/{{this._id}}" class="product-item-wrapper"> --}}
+        <p class="product-name">{{this.firstname}}</p>
+
+        <p class="product-name">{{this.lastname}}</p>
+        <p class="product-cat">Requested Date: {{this.date}}</p>
+        <p class="product-price">Phone Number{{this.phonenumber}}</p>
+        <p>{{this.message}}</p>
+        {{!-- </a> --}}
+        {{!-- <div class="flexed-item">
         <a href="/edit/{{this._id}}" class="button-primary a-link">Update Item</a>
       </div>
       <div class="flexed-item">
         <a href="/delete/{{this._id}}" class="button-primary a-link">Delete Item</a>
       </div> --}}
 
-      <br><br><br>
+      </div>
       {{/each}}
     </div>
   </section>

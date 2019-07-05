@@ -3,12 +3,21 @@
   text-align: center; }
 
 .nav {
-  background-color: #b2bbbd; }
+  background-color: #b2bbbd;
+  position: fixed;
+  z-index: 1;
+  width: 100%; }
 
 body {
   font-family: "Source Sans Pro", sans-serif;
   display: flex;
   flex-direction: column; }
+
+.background-blue {
+  background: blue; }
+
+.height {
+  height: 100vh; }
 
 h1 {
   font-family: "Source Sans Pro", sans-serif; }
@@ -31,34 +40,25 @@ h4 {
   justify-content: center; }
 
 .home-container {
-  height: calc(100vh - (40px));
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
+  height: 100vh;
   background: black;
-  width: 100%;
-  background-image: url("../images/bike.jpg");
-  image-rendering: auto;
-  background-size: contain;
+  background-image: url("../images/grass.jpg");
+  background-size: cover;
   background-repeat: no-repeat; }
 
 #intro {
-  color: tomato;
+  color: rgba(50, 159, 167, 0.836);
   font-size: 50px;
   margin-top: 50px; }
 
-#map {
-  height: 400px;
-  width: 800px; }
-
 .spacetop {
-  margin-top: 100px; }
+  padding-top: 150px; }
 
 .addbike {
   background-image: url("../images/adventure.jpg");
-  image-rendering: auto;
-  background-size: contain;
-  background-repeat: no-repeat; }
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh; }
 
 .flexcolumn {
   flex-direction: column;
@@ -69,5 +69,109 @@ h4 {
 
 .textcenter {
   text-align: center; }
+
+.rent-container {
+  position: relative;
+  width: 100%; }
+
+.motos-container {
+  width: 50%;
+  flex-direction: column;
+  margin-right: auto;
+  align-items: center;
+  padding-top: 70px;
+  background: salmon; }
+
+.margin {
+  margin: 0 auto; }
+
+.oneprod {
+  margin-top: 100px;
+  background: red; }
+
+.moto {
+  -webkit-box-shadow: 1px 4px 12px 4px rgba(94, 94, 94, 0.3);
+  -moz-box-shadow: 1px 4px 12px 4px rgba(94, 94, 94, 0.3);
+  box-shadow: 1px 4px 12px 4px rgba(94, 94, 94, 0.3);
+  width: 75%;
+  padding: 20px;
+  margin-bottom: 40px;
+  background: white;
+  border-radius: 20px; }
+
+.map {
+  position: fixed !important;
+  width: 50%;
+  height: 100vh;
+  right: 0; }
+
+.signup {
+  background-image: url("../images/automotive.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  color: rgba(223, 30, 30, 0.877);
+  font-weight: bold; }
+
+.login {
+  background-image: url("../images/action.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  color: rgba(238, 107, 20, 0.877);
+  font-weight: bold; }
+
+.rentit {
+  background-image: url("../images/machine.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  color: rgba(238, 107, 20, 0.877);
+  font-weight: bold;
+  padding-top: 50px; }
+
+.bg {
+  background-image: url("../images/asphalt.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  width: 100%;
+  position: fixed;
+  z-index: -3; }
+
+.singlereq {
+  color: black;
+  background: gray; }
+
+.bookingdone {
+  background-image: url("../images/adult.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  color: whitesmoke;
+  font-weight: bold;
+  padding-top: 400px; }
+
+.moto2 {
+  -webkit-box-shadow: 1px 4px 12px 4px rgba(94, 94, 94, 0.3);
+  -moz-box-shadow: 1px 4px 12px 4px rgba(94, 94, 94, 0.3);
+  box-shadow: 1px 4px 12px 4px rgba(94, 94, 94, 0.3);
+  padding: 20px;
+  margin-bottom: 40px;
+  background: white;
+  border-radius: 20px; }
+
+.yourbikes {
+  background: rgba(22, 155, 82, 0.801); }
+
+.editing {
+  justify-content: center;
+  background-image: url("../images/blur.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  color: whitesmoke; }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,42 +1,42 @@
-<div class="big-container product-manage-wrapper flexed-item">
-  <form method="POST" class="edit-product-form" action="/edit/{{product._id}}" enctype="multipart/form-data">
+<div class="big-container product-manage-wrapper flexed-item editing spacetop">
+  <form method="POST" class="edit-product-form " action="/edit/{{product._id}}" enctype="multipart/form-data">
     <h3 class="form-title">Change your Bike</h3>
     <div class="form-item-wrapper flexed-item">
-      <label for="bike" class="label-name label">Make</label>
+      <label for="bike" class="label-name label">Make: </label>
       <input name="make" type="text" class="input-text input" value="{{product.make}}">
     </div>
     <div class="form-item-wrapper flexed-item">
-      <label for="moto-ref" class="label-ref label">Model</label>
+      <label for="moto-ref" class="label-ref label">Model: </label>
       <input name="model" type="text" class="input-text input" value="{{product.model}}">
     </div>
     <div class="form-item-wrapper flexed-item">
-      <label for="moto-ref" class="label-ref label">Horsepower</label>
+      <label for="moto-ref" class="label-ref label">Horsepower: </label>
       <input name="horsepower" type="number" class="input-text input" value="{{product.horsepower}}">
     </div>
     <div class="form-item-wrapper flexed-item">
-      <label for="moto-ref" class="label-ref label">Displacement</label>
+      <label for="moto-ref" class="label-ref label">Displacement: </label>
       <input name="displacement" type="number" class="input-text input" value="{{product.displacement}}">
     </div>
     <div class="form-item-wrapper flexed-item">
-      <label for="moto-price" class="label-ref label">Price</label>
+      <label for="moto-price" class="label-ref label">Price: </label>
       <input name="dailyprice" type="number" class="input-text input" value="{{product.dailyprice}}">
     </div>
     <div class="form-item-wrapper flexed-item">
-      <label for="moto-descr" class="label-descr label">Description</label>
+      <label for="moto-descr" class="label-descr label">Description: </label>
       <input name="description" type="text" class="input-text input" value="{{product.description}}">
     </div>
     <div class="form-item-wrapper flexed-item">
-      <label for="moto-descr" class="label-descr label">Location</label>
+      <label for="moto-descr" class="label-descr label">Location: </label>
       <input name="location" type="text" class="input-text input" value="{{product.location}}">
     </div>
     <div class="form-item-wrapper flexed-item">
-      <label for="image_product">pick an image</label>
+      <label for="image_product">Image: </label>
       <input id="image_product" type="file" name="image_product">
     </div>
     <div class="form-item-wrapper flexed-item">
       <label for="moto-main-cat" class="label-main-cat label">Bodytype</label>
       <select name="bodytype" id="main_category" class="select">
-        <option value="">Choose main Category...</option>
+        <option value="">Select Bodytype</option>
         <option value="Scooter">Scooter</option>
         <option value="Naked Bike">Naked Bike</option>
         <option value="Supersport">Supersport</option>

@@ -1,19 +1,19 @@
 <div class="main-content-products flexed-item big-container">
 
   {{!-- PRODUCTS--}}
-  <section class="products-wrapper">
-    <div class="products-grid flexed-item">
+  <section class="products-wrapper rent-container flexed-item">
+    <div class="motos-container products-grid flexed-item">
       {{#each product}}
-      <a href="/rentbike/{{this._id}}" class="product-item-wrapper">
+      <a href="/rentbike/{{this._id}}" class="moto">
         <div class="product-img"><img src={{this.image}} alt="bikes"></div>
         <h1 class="product-name">{{this.make}}</h1>
         <h1 class="product-name">{{this.model}}</h1>
         <h2 class="product-cat">Body Type: {{this.bodytype}}</h2>
         <h2 class="product-price">Price per day: ${{this.dailyprice}}</h2>
-        <h2>Location of the Bike {{this.location}}</h2>
+        <h2>Location: {{this.location}}</h2>
       </a>
       {{/each}}
     </div>
-    <div id="map"></div>
+    <div id="map" class="map"></div>
   </section>
 </div>

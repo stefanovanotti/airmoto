@@ -1,22 +1,24 @@
-<div class="main-content-products big-container center textcenter">
+<div class="main-content-products big-container center textcenter spacetop yourbikes">
 
   {{!-- PRODUCTS--}}
   <section class="products-wrapper">
     <div class="products-grid flexed-item flexcolumn">
       {{#each product}}
       {{!-- <a href="/rentbike/{{this._id}}" class="product-item-wrapper"> --}}
-      <div class="product-img"><img src={{this.image}} alt="bikes"></div>
-      <h1 class="product-name">{{this.make}}</h1>
-      <h1 class="product-name">{{this.model}}</h1>
-      <h2 class="product-cat">Body Type: {{this.bodytype}}</h2>
-      <h2 class="product-price">Price per day: ${{this.dailyprice}}</h2>
-      <h2>Location of the Bike {{this.location}}</h2>
-      {{!-- </a> --}}
-      <div class="flexed-item">
-        <a href="/edit/{{this._id}}" class=" btn btn-primary button-primary a-link">Update Item</a>
-      </div>
-      <div class="flexed-item">
-        <a href="/delete/{{this._id}}" class="button-primary a-link btn btn-danger">Delete Item</a>
+      <div class="product-img moto2">
+        <img src={{this.image}} alt="bikes">
+        <h1 class="product-name">{{this.make}}</h1>
+        <h1 class="product-name">{{this.model}}</h1>
+        <h2 class="product-cat">Body Type: {{this.bodytype}}</h2>
+        <h2 class="product-price">Price per day: ${{this.dailyprice}}</h2>
+        <h2>Location of the Bike {{this.location}}</h2>
+        {{!-- </a> --}}
+        <div class="flexed-item">
+          <a href="/edit/{{this._id}}" class=" btn btn-primary button-primary a-link">Update Item</a>
+        </div>
+        <div class="flexed-item">
+          <a href="/delete/{{this._id}}" class="button-primary a-link btn btn-danger">Delete Item</a>
+        </div>
       </div>
       {{/each}}
     </div>
